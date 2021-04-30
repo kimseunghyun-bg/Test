@@ -21,16 +21,12 @@
       <sidebar-link to="/admin/icons">
         <i class="nc-icon nc-atom"></i>
         <p>Icons</p>
-      </sidebar-link>
-      <sidebar-link to="/admin/maps">
-        <i class="nc-icon nc-pin-3"></i>
-        <p>Maps</p>
-      </sidebar-link>
+      </sidebar-link>      
       <sidebar-link to="/admin/notifications">
         <i class="nc-icon nc-bell-55"></i>
         <p>Notifications</p>
       </sidebar-link>
-      <sidebar-link to="/admin/notifications">
+      <sidebar-link to="/admin/message">
         <i class="nc-icon nc-bell-55"></i>
         <p>Message</p>
       </sidebar-link>

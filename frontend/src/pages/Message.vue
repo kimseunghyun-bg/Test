@@ -1,32 +1,94 @@
 <template>
-    <div>
-        <h1>sub Page</h1>
-        <div>
-            <h2> Alert</h2>
-            <button type="button" @click="alertExample1"> 기본 </button>
-            <button type="button" @click="alertExample2"> 타이틀 변경 </button>
-            <button type="button" @click="alertExample3"> 성공시 </button>
-            <button type="button" @click="alertExample4"> 경고 </button>
-            <button type="button" @click="alertExample5"> Error </button>
-        </div>
-        <div>
-            <h2> Confirm</h2>
-            <button type="button" @click="confirmExample0"> confirm </button>
-            <button type="button" @click="confirmExample1"> confirm </button>
-            <button type="button" @click="confirmExample2"> confirm </button>
-            <button type="button" @click="confirmExample3"> confirm </button>
-        </div>
-        <div>
-            <h2> prompt</h2>
-            <button type="button" @click="promptExample0"> prompt </button>
-            <button type="button" @click="promptExample1"> prompt </button>
-            <button type="button" @click="promptExample2"> prompt </button>
-            <button type="button" @click="promptExample3"> prompt </button>
-        </div>
-        <div>
-            <h2> advanced</h2>
-            <button type="button" @click="advancedExample2"> prompt </button>
-            <button type="button" @click="advancedExample3"> prompt </button>
+    <div class="content">
+        <div class="container-fluid">
+            <card>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Alert Style</h5>
+                    </div>
+                </div>
+                <div class="row">
+                        
+                    <div class="col-md-4">
+                        <button class="btn btn-default btn-block" @click="alertExample1"> default </button>
+                    </div>                        
+                    <div class="col-md-4">
+                        <button class="btn btn-default btn-block" @click="alertExample2"> Title Change </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-default btn-block" @click="alertExample3"> Success </button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-default btn-block" @click="alertExample4"> Warning </button>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <button class="btn btn-default btn-block" @click="alertExample5"> Error </button>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Confirm Style</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="confirmExample0"> default </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="confirmExample1"> Title Change </button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">                    
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="confirmExample2"> Success </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="confirmExample3"> Warning </button>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Prompt Style</h5>
+                    </div>
+                </div>
+                <div class="row">                    
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="promptExample0"> Prompt1 </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="promptExample1"> Prompt2 </button>
+                    </div>   
+                </div>
+                <br>
+                <div class="row">                    
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="promptExample3"> Prompt3 </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="promptExample4"> Prompt4 </button>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Advanced Style</h5>
+                    </div>
+                </div>
+                <div class="row">                    
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="advancedExample2"> advanced1 </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default btn-block" @click="advancedExample3"> advanced2 </button>
+                    </div>   
+                </div>
+                
+            </card>
         </div>
     </div>
 </template>

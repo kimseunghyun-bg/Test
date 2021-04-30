@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 
+//alert, confirm component
+import VueSimpleAlert from "vue-simple-alert"
 //axios plugin
 import axios from'axios'
 // LightBootstrap plugin
@@ -16,7 +18,7 @@ Vue.use(VueRouter)
 Vue.use(LightBootstrap)
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
-
+Vue.use(VueSimpleAlert, { title: "Vue Simple Alert", width: "420px" });
 
 
 // configure router

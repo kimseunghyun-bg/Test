@@ -23,6 +23,7 @@
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.12",
     "vue-router": "^3.0.2",
+    "vue-simple-alert": "^1.1.1",
     "vue2-google-maps": "^0.8.4"
   },
   "devDependencies": {

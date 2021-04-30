@@ -128,7 +128,7 @@
       },
       axiosChk () {
         this.$axios
-          .get("/test01")
+          .get("/api/test01")
           .then(res => {
             console.log(res);
           })

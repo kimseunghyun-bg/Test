@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Test {
 	
-	@GetMapping("/test01")
+	@GetMapping("/api/test01")
     public TestData getTestData() {
 		TestData testData = new TestData(0, "String", 0L, Arrays.asList("Str1", "Str2"));
         return testData;
