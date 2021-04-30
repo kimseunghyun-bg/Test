@@ -1,5 +1,6 @@
 HELP.md
 target/
+nodeJs/
 frontendTarget/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
