@@ -1,6 +1,7 @@
 <template>
   <card>
     <h4 slot="header" class="card-title">Edit Profile</h4>
+    <button type="button" @click="axiosChk"> HTTP</button>
     <form>
       <div class="row">
         <div class="col-md-5">
@@ -124,6 +125,16 @@
     methods: {
       updateProfile () {
         alert('Your data: ' + JSON.stringify(this.user))
+      },
+      axiosChk () {
+        this.$axios
+          .get("/test01")
+          .then(res => {
+            console.log(res);
+          })
+          .catch(err => {
+            console.log(err);
+          })
       }
     }
   }

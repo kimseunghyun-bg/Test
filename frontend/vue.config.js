@@ -9,7 +9,15 @@ module.exports = {
   lintOnSave: false,
   outputDir: "../src/main/resources/static",
   indexPath: "../static/index.html",
-  
+  devServer:{
+    proxy:{
+    '^/api': {
+      target: 'http://127.0.0.1:8080',
+      changeOrigin: true,
+      logLevel: 'debug'
+      }
+    }
+  },
    configureWebpack: {
     // Set up all the aliases we use in our app.
     resolve: {

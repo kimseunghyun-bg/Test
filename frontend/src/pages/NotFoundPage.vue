@@ -31,7 +31,7 @@
           <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
               <h2 class="title text-danger">404 Not Found</h2>
-              <h2 class="title">Oops! It seems that this page does not exist.</h2>
+              <h2 class="title">지정된 페이지를 찾을 수 없습니다.</h2>
             </div>
           </div>
         </div>
@@ -48,13 +48,7 @@
               <router-link :to="{path:'/register'}">Register</router-link>
             </li>
           </ul>
-        </nav>
-        <div class="copyright text-center">
-          &copy; Coded with
-          <i class="fa fa-heart heart"></i> by
-          <a href="https://binarcode.com" target="_blank">BinarCode</a>.
-          Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
-        </div>
+        </nav>        
       </div>
     </footer>
   </div>
