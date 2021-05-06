@@ -11,12 +11,18 @@ import Icons from 'src/pages/Icons.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import Message from 'src/pages/Message.vue'
+import Login from 'src/pages/Login.vue'
 
 const routes = [
   {
     path: '/',
     component: DashboardLayout,
     redirect: '/admin/overview'
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/admin',
@@ -62,5 +68,7 @@ const routes = [
   },
   { path: '*', component: NotFound }
 ]
+
+
 
 export default routes
