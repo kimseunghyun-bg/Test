@@ -19,12 +19,14 @@
     "chartist": "^0.11.0",
     "core-js": "^2.5.7",
     "google-maps": "^3.2.1",
+    "path": "^0.12.7",
     "register-service-worker": "^1.5.2",
+    "request": "^2.88.2",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.12",
     "vue-router": "^3.0.2",
-    "vue-simple-alert": "^1.1.1",
-    "vue2-google-maps": "^0.8.4"
+    "vue2-google-maps": "^0.8.4",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

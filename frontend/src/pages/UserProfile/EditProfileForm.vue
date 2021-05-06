@@ -118,8 +118,7 @@
           city: 'melbourne',
           country: 'Australia',
           postalCode: '',
-          aboutMe: `Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.`,
-          ran_str: []
+          aboutMe: `Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.`
         }
       }
     },
@@ -128,18 +127,30 @@
         alert('Your data: ' + JSON.stringify(this.user))
       },
       axiosChk () {
-        this.$axios
-          .get("/api/test01")
-          .then(res => {
-            this.ran_str = res.data;
-            console.log("this.ran_str = "+this.ran_str.strData);
-            console.log(res);
-          })
-          .catch(err => {
+        //alert("1111");
+        this.$axios.get("/api/test01").then(res => {
+            //console.log(res);
+
+            console.log(res.data);
+            this.user.company = res.data.company;
+            this.user.username = res.data.username;
+            this.user.email = res.data.email;
+            this.user.firstName = res.data.firstName;
+            this.user.lastName = res.data.lastName;
+            this.user.address = res.data.address;
+            this.user.city = res.data.city;
+            this.user.country = res.data.country;
+            this.user.postalCode = res.data.postalCode;
+            this.user.aboutMe = res.data.aboutMe;
+        }).catch(err => {
             console.log(err);
-          })
+        })
       }
-    }
+      
+    },
+    mounted(){
+        //this.axiosChk()
+      }
   }
 
 </script>
