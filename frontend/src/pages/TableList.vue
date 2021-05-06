@@ -48,7 +48,22 @@
           </card>
 
         </div>
+        <div class="col-12">
+          <card class="strpied-tabled-with-hover"
+                body-classes="table-full-width table-responsive"
+          >
+            <template slot="header">
+              <h4 class="card-title">Data binding Table</h4>
+              <p class="card-category">Data binding Table</p>
+              <button type="button" @click="dataBind"> dataBind </button>
+            </template>
+            <l-table class="table-hover table-striped"
+                     :columns="a"
+                     :data="table1.data">
+            </l-table>
+          </card>
 
+        </div>
       </div>
     </div>
   </div>
@@ -56,6 +71,7 @@
 <script>
   import LTable from 'src/components/Table.vue'
   import Card from 'src/components/Cards/Card.vue'
+
   const tableColumns = ['Id', 'Name', 'Salary', 'Country', 'City']
   const tableData = [{
     id: 1,
@@ -106,8 +122,22 @@
         table2: {
           columns: [...tableColumns],
           data: [...tableData]
-        }
+        },
+        testColumn: [],
+        testData: []
       }
+    },
+    methods: {
+      dataBind () {
+        this.$axios.get("/api/dataBind")
+                   .then(res => {
+                     this.testColumn = res.data.columns;
+                     this.testData = res.data.data;
+                   })
+                   .catch(err => {
+                     console.log(err);
+                   })
+      }  
     }
   }
 </script>

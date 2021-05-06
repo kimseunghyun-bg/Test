@@ -118,7 +118,8 @@
           city: 'melbourne',
           country: 'Australia',
           postalCode: '',
-          aboutMe: `Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.`
+          aboutMe: `Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.`,
+          ran_str: []
         }
       }
     },
@@ -130,6 +131,8 @@
         this.$axios
           .get("/api/test01")
           .then(res => {
+            this.ran_str = res.data;
+            console.log("this.ran_str = "+this.ran_str.strData);
             console.log(res);
           })
           .catch(err => {
