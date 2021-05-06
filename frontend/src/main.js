@@ -38,7 +38,7 @@ const router = new VueRouter({
       name: 'Login',
       component: Login
     },
-    { path: '*', component: NotFound }
+    { path: '*', name:'404', component: NotFound }
   ],// short for routes: routes
   linkActiveClass: 'nav-item active',
   scrollBehavior: (to) => {
@@ -58,11 +58,21 @@ router.beforeEach((to, from, next) => {
   if(authRequired && !loggedIn) {
     router.push({name: 'Login', query: {to: to.path}});
   }else{
+    console.log(to);
+    console.log(from);
     axios.post("/api/menu").then(res => {
       console.log(res);
+      let resolved = router.resolve(to.path);
+      console.log(resolved);
+      if(resolved.route.name != '404'){
+        next();
+      }else{
+        next({path: '/', query: {path: to.path}})
+      }
+
       //next('/');
       //router.push({name: 'main', query: {to: to.path}});
-      next();
+      //next();
     }).catch(err => {
         console.log(err);
     })

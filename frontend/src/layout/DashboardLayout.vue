@@ -130,7 +130,11 @@
     created() {
       const routes = this.routerFormat(this.routesData);
       this.$router.addRoutes(routes);
-      this.$router.push('/admin/overview');
+      if(this.$route.query.path){
+        this.$router.push(this.$route.query.path);
+      }else{
+        this.$router.push('/admin/overview');
+      }
     },
     methods: {
       toggleSidebar () {
