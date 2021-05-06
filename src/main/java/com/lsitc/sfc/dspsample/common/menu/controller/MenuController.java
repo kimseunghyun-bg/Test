@@ -1,4 +1,4 @@
-package com.lsitc.sfc.dspsample.common.menu;
+package com.lsitc.sfc.dspsample.common.menu.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;

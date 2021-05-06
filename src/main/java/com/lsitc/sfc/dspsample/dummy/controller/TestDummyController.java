@@ -1,4 +1,4 @@
-package com.lsitc.sfc.dspsample.dummy;
+package com.lsitc.sfc.dspsample.dummy.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Test {
+public class TestDummyController {
 	
 	@GetMapping("/api/test01")
     public TestData getTestData() {

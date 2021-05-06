@@ -1,4 +1,4 @@
-package com.lsitc.sfc.dspsample.common.login;
+package com.lsitc.sfc.dspsample.common.login.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
