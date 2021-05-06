@@ -91,6 +91,15 @@ public class MenuController {
 		menuVO.setRouterName("Notifications");
 		menuList.add(menuVO);
 		
+		menuVO = new MenuVO();
+		menuVO.setMenuId("8");
+		menuVO.setMenuName("Message");
+		menuVO.setUrl("/admin/message");
+		menuVO.setIcon("nc-email-83");
+		menuVO.setComponent("src/pages/Messate.vue");
+		menuVO.setRouterName("Message");
+		menuList.add(menuVO);
+		
 		map.put("menuList", menuList);
 		
 		return map;

@@ -73,7 +73,8 @@
           {menuId: '4', menuName: 'Typography', url: '/admin/typography', icon : 'nc-paper-2'},
           {menuId: '5', menuName: 'Icons', url: '/admin/icons', icon : 'nc-atom'},
           {menuId: '6', menuName: 'Maps', url: '/admin/maps', icon : 'nc-pin-3'},
-          {menuId: '7', menuName: 'Notifications', url: '/admin/notifications', icon : 'nc-bell-55'}
+          {menuId: '7', menuName: 'Notifications', url: '/admin/notifications', icon : 'nc-bell-55'},
+          {menuId: '8', menuName: 'Message', url: '/admin/message', icon : 'nc-email-83'}
         ],
         routesData: [
           {
@@ -115,6 +116,11 @@
                 path: '/admin/notifications',
                 name: 'Notifications',
                 component: resolve => require(['../pages/Notifications.vue'], resolve)
+              },
+              {
+                path: '/admin/message',
+                name: 'Message',
+                component: resolve => require(['../pages/Message.vue'], resolve)
               }
             ]
           }
