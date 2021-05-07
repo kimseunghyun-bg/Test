@@ -1,7 +1,6 @@
 HELP.md
 target/
 nodeJs/
-frontendTarget/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -11,7 +10,6 @@ frontendTarget/
 .classpath
 .factorypath
 .project
-.settings
 .springBeans
 .sts4-cache
 
@@ -120,7 +118,7 @@ buildNumber.properties
 
 .DS_Store
 node_modules
-src/main/resources/static
+**/src/main/resources/static
 
 # local env files
 .env.local
