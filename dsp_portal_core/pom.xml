@@ -9,4 +9,73 @@
   <packaging>jar</packaging>
   <name>dsp_portal_core</name>
   <description>DSP PORTAL CORE</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-devtools</artifactId>
+	        <scope>runtime</scope>
+	        <optional>true</optional>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.projectlombok</groupId>
+	        <artifactId>lombok</artifactId>
+	        <optional>true</optional>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-tomcat</artifactId>
+	        <scope>provided</scope>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-test</artifactId>
+	        <scope>test</scope>
+	    </dependency>
+	</dependencies>
+
+
+  <build>
+      <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <excludes>
+                    <exclude>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                    </exclude>
+                </excludes>
+                <skip>true</skip>
+            </configuration>
+          </plugin>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-install-plugin</artifactId>
+              <executions>
+                  <execution>
+                      <id>install</id>
+                      <phase>install</phase>
+                      <goals>
+                          <goal>install-file</goal>
+                      </goals>
+                      <configuration>
+                          <groupId>${project.groupId}</groupId>
+                          <artifactId>${project.artifactId}</artifactId>
+                          <version>${project.version}</version>
+                          <packaging>${project.packaging}</packaging>
+                          <file>${project.build.directory}/${project.name}-${project.version}.${project.packaging}</file>
+                          <generatePom>true</generatePom>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+  </build>
 </project>
