@@ -1,20 +1,36 @@
 package com.lsitc.sfc.dspsample.dummy.controller;
 
-import java.util.Arrays;
-import java.util.List;
-
+import com.lsitc.sfc.core.service.PropertyService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Locale;
+
 @RestController
 public class TestDummyController {
-	
+
+	@Autowired
+	MessageSource messageSource;
+
+	@Autowired
+	PropertyService propertyService;
+
 	@GetMapping("/api/test01")
-    public TestData getTestData() {
+	public TestData getTestData() {
 		TestData testData = new TestData();
 		System.out.println("testData" + testData);
-        return testData;
-    }
+		return testData;
+	}
+
+	@GetMapping("/api/message")
+	public void getMessage(Locale locale) {
+		String key = "title";
+		String message = messageSource.getMessage(key, null, Locale.ENGLISH);
+		System.out.println(message);
+		System.out.println(propertyService.getString("test"));
+	}
 
 }
 

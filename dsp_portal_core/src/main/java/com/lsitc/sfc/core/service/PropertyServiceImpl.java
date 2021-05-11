@@ -1,16 +1,14 @@
 package com.lsitc.sfc.core.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class PropertyServiceImpl implements PropertyService {
 
     private final Environment environment;
-
-    public PropertyServiceImpl(Environment environment) {
-        this.environment = environment;
-    }
 
     @Override
     public String getString(String name) {
