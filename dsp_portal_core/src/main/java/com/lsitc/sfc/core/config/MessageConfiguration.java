@@ -1,6 +1,7 @@
 package com.lsitc.sfc.core.config;
 
 import com.lsitc.sfc.core.service.PropertyService;
+import com.lsitc.sfc.core.support.CustomReloadableMessageSource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +18,7 @@ public class MessageConfiguration {
 
     @Bean
     public MessageSource messageSource() {
-        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+        ReloadableResourceBundleMessageSource messageSource = new CustomReloadableMessageSource();
         messageSource.setBasename("classpath:/" + propertyService.getString("spring.messages.basename"));
         messageSource.setDefaultEncoding("UTF-8");
         messageSource.setCacheSeconds(0);
