@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DspSampleApplication {
+public class DspPortalWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DspSampleApplication.class, args);
+        SpringApplication.run(DspPortalWebApplication.class, args);
     }
 
 }
