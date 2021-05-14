@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class PropertyServiceImpl implements PropertyService {
 
-    private final Environment environment;
+    private Environment environment;
 
     @Override
     public String getString(String name) {

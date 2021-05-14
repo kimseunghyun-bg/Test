@@ -14,7 +14,7 @@ import java.util.Locale;
 @RequiredArgsConstructor
 public class MessageConfiguration {
 
-    private final PropertyService propertyService;
+    private PropertyService propertyService;
 
     @Bean
     public MessageSource messageSource() {

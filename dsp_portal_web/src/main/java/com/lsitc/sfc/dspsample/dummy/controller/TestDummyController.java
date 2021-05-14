@@ -8,8 +8,10 @@ import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -29,12 +31,20 @@ public class TestDummyController {
 	}
 
 	@GetMapping("/api/message")
-	public Map<String, String> getMessage() {
-		Map<String, String> allMessage = MessageUtils.getAllMessage();
+	public Map<String, Object> getMessage() {
+		Map<String, Object> allMessage = new HashMap<>(MessageUtils.getAllMessage());
 		for (String name : allMessage.keySet()) {
 			System.out.println(name + ": " + allMessage.get(name));
 		}
 		return allMessage;
+	}
+
+	@PostMapping("/api/toMap")
+	public Map<String, Object> toMap(Map<String, Object> request) {
+		for (String name : request.keySet()) {
+			System.out.println(name + ": " + request.get(name));
+		}
+		return request;
 	}
 
 }
