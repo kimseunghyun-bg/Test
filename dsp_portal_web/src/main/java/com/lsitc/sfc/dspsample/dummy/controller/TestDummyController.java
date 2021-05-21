@@ -5,16 +5,19 @@ import com.lsitc.sfc.core.util.MessageUtils;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@Slf4j
 public class TestDummyController {
 
 	@Autowired
@@ -34,16 +37,13 @@ public class TestDummyController {
 	public Map<String, Object> getMessage() {
 		Map<String, Object> allMessage = new HashMap<>(MessageUtils.getAllMessage());
 		for (String name : allMessage.keySet()) {
-			System.out.println(name + ": " + allMessage.get(name));
+			log.info("{}: {}", name, allMessage.get(name));
 		}
 		return allMessage;
 	}
 
 	@PostMapping("/api/toMap")
-	public Map<String, Object> toMap(Map<String, Object> request) {
-		for (String name : request.keySet()) {
-			System.out.println(name + ": " + request.get(name));
-		}
+	public Map<String, Object> toMap(@RequestBody Map<String, Object> request) {
 		return request;
 	}
 
